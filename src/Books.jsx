@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const fetchBooks = async ({ pageParam = 0, queryKey }) => {
   const [_, { seed, region, avgLikes, avgReviews }] = queryKey;
   try {
-    const response = await fetch('http://localhost:3001/api/books', {
+    const response = await fetch('https://books-server-green.vercel.app/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
